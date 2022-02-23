@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import {Box} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import {useState} from "react";
+import {booksSearchAPI} from "../api";
 
 
 const HeaderBG = styled.div`
@@ -13,8 +14,12 @@ const HeaderBG = styled.div`
 `
 
 
+
+
 export const Header = () => {
     const [search,setSearch]=useState('')
+
+
     return (
         <HeaderBG>
             <h1 style={{color:'white',fontWeight:'700',paddingTop:"100px"}}>Search for Books</h1>
@@ -26,7 +31,7 @@ export const Header = () => {
                     value={search}
                     onChange={(e)=>setSearch(e.target.value)}
                 />
-                <SearchIcon  sx={{color:'white',marginTop:"90px",fontSize:'30px'}}/>
+                <SearchIcon onClick={()=>booksSearchAPI.getBooks(search)} sx={{color:'white',marginTop:"90px",fontSize:'30px'}}/>
             </Box>
         </HeaderBG>
     )
