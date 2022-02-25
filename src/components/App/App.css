@@ -1,0 +1,11 @@
+.page__container {
+	margin: 0 auto;
+	min-width: 270px;
+	/* max-width: 1920px; */
+	min-height: 100vh;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

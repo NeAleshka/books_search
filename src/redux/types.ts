@@ -1,0 +1,10 @@
+export const REQUEST_SEARCH = 'GET/REQUEST_SEARCH'; // saga
+export const FETCH_BOOKS = 'GET/FETCH_BOOKS'; // reducer
+export const FETCH_BOOKS_SUCCESS = 'GET/FETCH_BOOKS_SUCCESS'; // reducer
+export const FETCH_BOOKS_ERROR = 'GET/FETCH_BOOKS_ERROR'; // reducer
+export const ADD_BOOKS = 'PAGINATION_BOOKS/ADD_BOOKS'; // saga
+export const ADD_MOREBOOKS = 'PAGINATION_BOOKS/ADD_MOREBOOKS'; // reducer
+export const ADD_SEARCCONFIG = 'SEARCHING/ADD_SEARCCONFIG'; // reducer
+export const SEARCCONFIG_UPDATE = 'SEARCHING/SEARCCONFIG_UPDATE'; // reducer
+export const GET_FULLBOOK = 'FULLBOOK/GET_FULLBOOK'; // saga
+export const WRITE_FULLBOOK = 'FULLBOOK/WRITE_FULLBOOK'; // reducer

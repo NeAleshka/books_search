@@ -1,0 +1,12 @@
+.bookpage {
+    margin: 0 auto;
+    min-width: 270px;
+	max-width: 1440px;
+
+}
+
+.bookpage__list {
+    padding: 0;
+    list-style: none;
+	
+}

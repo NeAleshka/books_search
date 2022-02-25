@@ -1,0 +1,30 @@
+.bookscard {
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(91, 94, 90, 0.2);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(91, 94, 90, 0.2);
+	box-shadow: 4px 4px 8px 0px rgba(91, 94, 90, 0.2);
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: #f3f1f1;
+}
+
+.bookscard__img {
+	display: block;
+	margin: 0 auto;
+	object-fit: cover;
+	width: 128px;
+	height: 172px;
+	-webkit-box-shadow: 14px 14px 11px -1px rgba(129, 128, 129, 0.2);
+	-moz-box-shadow: 14px 14px 11px -1px rgba(129, 128, 129, 0.2);
+	box-shadow: 14px 14px 11px -1px rgba(129, 128, 129, 0.2);
+}
+
+.bookscard__text {
+	font-size: 16px;
+}
+
+.bookscard:hover {
+	-webkit-box-shadow: 4px 4px 8px 0px rgba(225, 9, 238, 0.2);
+	-moz-box-shadow: 4px 4px 8px 0px rgba(225, 9, 238, 0.2);
+	box-shadow: 4px 4px 8px 0px rgba(225, 9, 238, 0.2);
+}
