@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, {FC, useState} from 'react';
 import './SearchForm.css';
 import { useForm } from 'react-hook-form';
+import axios from "axios";
 
 interface SearchFormProps {
 	onSearch: (args: dataTypes) => void;
@@ -16,9 +17,12 @@ const SearchForm: FC<SearchFormProps> = ({ onSearch }) => {
 	const form = useForm({ mode: 'onChange' });
 	const { reset, register, handleSubmit } = form;
 	const { isValid } = form.formState;
+	const [totalGetBooks,setTotalGetBooks]=useState<number|null>(null)
 
-	
 	const onSubmit = (data: any): void =>  {
+		axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${data.search}`).then(res=>{
+			setTotalGetBooks(res.data.totalItems)
+		})
 		onSearch(data);
 		reset();
 	};
@@ -28,13 +32,13 @@ const SearchForm: FC<SearchFormProps> = ({ onSearch }) => {
 			<fieldset className='searchform__fieldset'>
 				<input
 	className='searchform__input'
-	placeholder='Название книги'
+	placeholder='Enter Book name'
 	type='text'
 					{...register('search', {required: true})}
 	/>
 
 				<button className='searchform__btn' type='submit' disabled={!isValid}>
-					Поиск
+					Search
 				</button>
 			</fieldset>
 			<fieldset className='searchform__fieldset searchform__fieldset_select-resize'>
@@ -66,7 +70,9 @@ const SearchForm: FC<SearchFormProps> = ({ onSearch }) => {
 					<option value='poetry'>poetry</option>
 				</select>
 			</fieldset>
+			{totalGetBooks && <div style={{textAlign:'center',color:'white',fontSize:"20px"}}>Total found Books:{totalGetBooks}</div>}
 		</form>
+
 	);
 };
 

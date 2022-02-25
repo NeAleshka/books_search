@@ -7,7 +7,7 @@ export async function fetchBooks(searchConfig: any) {
         category,
     } = searchConfig.searchConfig;
 
-    const response = await fetch(`${BASE_URL}=${searchWord}&subject:${category}&orderBy=${sorting}&startIndex=${startIndex}&key=${GAPI_KEY}`);
+    const response = await fetch(`${BASE_URL}=${searchWord}&subject:${category}&orderBy=${sorting}&startIndex=${startIndex}&maxResults=${30}&key=${GAPI_KEY}`);
     return await response.json();
 }
 

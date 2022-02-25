@@ -31,10 +31,11 @@ export const searchReducer = (state = initialState, action: SearchAction): Searc
 				category: action.payload.category,
 			};
 		case SEARCCONFIG_UPDATE:
+			debugger
 			return {
 				...state,
 				searchWord: action.payload.search,
-				startIndex: (state.startIndex += 10),
+				startIndex: (state.startIndex += 30),
 				sorting: action.payload.sorting,
 				category: action.payload.category,
 			};

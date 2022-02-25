@@ -46,7 +46,7 @@ function App() {
 
 
 		if (books.length) {
-			const startIndex: number = index + 10;
+			const startIndex: number = index + 30;
 
 			interface searchConfigTypes {
 				search: string;
