@@ -13,7 +13,6 @@ export async function fetchBooks(searchConfig: any) {
 
 export async function getFullBook(data: any) {
     const { selfLink } = data;
-
     const response = await fetch(selfLink);
     return await response.json();
 }
